@@ -27,6 +27,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.project.MavenProject;
 import org.junit.*;
+import org.osgi.framework.VersionRange;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -276,6 +277,11 @@ public class CapabilityUtilsTest {
         } catch (Exception e) {
             // expected exception
         }
+    }
+
+    @Test
+    public void testImport() {
+        new VersionRange("1.0");
     }
 
 }
